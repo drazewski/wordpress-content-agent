@@ -1,11 +1,11 @@
 ---
-name: wp-tags-taxonomy
-description: Choose a sensible category and a small set of tags for a WordPress article using reusable, topic-neutral rules.
+name: taxonomy
+description: Choose a sensible category and a small set of tags for an article using reusable, topic-neutral rules.
 ---
 
 # Taxonomy rules
 
-- Respect the existing taxonomy rules gathered during `wp-onboarding` when the target project already has categories or tags.
+- Respect the existing taxonomy rules gathered during `onboarding` when the target project already has categories or tags.
 - Assign one main category whenever possible.
 - Choose 2-5 tags that reflect the article's concrete topic.
 - Prefer existing tags over inventing new ones.
@@ -26,4 +26,3 @@ description: Choose a sensible category and a small set of tags for a WordPress 
 # Reference map
 
 Check `tags-map.md` for a reusable starter taxonomy that can be adapted to the target site.
-

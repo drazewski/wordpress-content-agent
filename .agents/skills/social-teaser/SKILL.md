@@ -1,6 +1,6 @@
 ---
-name: wp-social-teaser
-description: Prepare homepage teaser text and social media copy for a finished WordPress article when requested by the workflow.
+name: social-teaser
+description: Prepare homepage teaser text and social media copy for a finished article when requested by the workflow.
 ---
 
 # Purpose
@@ -32,4 +32,3 @@ Prepare only the formats the user requested. Possible outputs:
 - Avoid clickbait and vague curiosity hooks.
 - Match the tone and audience from `project-context.md`.
 - If the article is based on research, preserve uncertainty and limits.
-

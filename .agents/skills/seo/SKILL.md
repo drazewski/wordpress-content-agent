@@ -1,11 +1,11 @@
 ---
-name: wp-seo
-description: Apply universal SEO rules to WordPress articles while keeping the text natural, useful, and readable.
+name: seo
+description: Apply universal SEO rules to articles while keeping the text natural, useful, and readable.
 ---
 
 # Keyword strategy
 
-- Follow the keyword policy defined during `wp-onboarding` if one exists.
+- Follow the keyword policy defined during `onboarding` if one exists.
 - Choose one main keyword or phrase that matches the real topic of the article.
 - Add secondary phrases only when they fit naturally.
 - Prefer search intent alignment over keyword density.
@@ -30,4 +30,3 @@ description: Apply universal SEO rules to WordPress articles while keeping the t
 
 - Valuable, specific writing usually beats keyword-heavy copy.
 - SEO should strengthen the article, not distort it.
-

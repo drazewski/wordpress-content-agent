@@ -1,13 +1,13 @@
 ---
-name: wp-style
-description: Define universal editorial rules for writing clear WordPress articles that can adapt to different topics, audiences, and brands.
+name: editorial-style
+description: Define universal editorial rules for writing clear articles that can adapt to different topics, audiences, and brands.
 ---
 
 ## Universal editorial style
 
 Goal: write articles that are clear, credible, readable, and adaptable. Do not imitate one fixed author voice unless the user asks for that explicitly.
 
-Always start from the project context collected through `wp-onboarding`. Match the tone, audience, format, and voice defined there before drafting.
+Always start from the project context collected through `onboarding`. Match the tone, audience, format, and voice defined there before drafting.
 
 ## Tone
 
@@ -49,7 +49,7 @@ Always start from the project context collected through `wp-onboarding`. Match t
 - overexplaining simple points,
 - forced lists where paragraphs work better.
 
-## WordPress-ready format
+## Article output format
 
 Return the article in this structure:
 
@@ -68,4 +68,3 @@ Check these helper files:
 - `intro-examples.md`
 - `endings-examples.md`
 - `best-read-articles-examples.md`
-

@@ -16,12 +16,14 @@ This file is created during onboarding. You can edit it manually at any time.
 - Main source types:
 - External research:
 - Source list in final articles:
+- Links to cited sources:
 
 ## Output
 
-- Default output:
-- WordPress draft publishing:
-- Approval needed before WordPress draft:
+- Base export:
+- Additional export:
+- WordPress draft export:
+- Approval needed before publishing draft:
 
 ## SEO And Taxonomy
 
@@ -33,6 +35,7 @@ This file is created during onboarding. You can edit it manually at any time.
 
 - Typical article length:
 - Preferred structure:
+- Headings:
 - Internal linking:
 - Social teaser:
 - Editorial review against existing content:
@@ -41,6 +44,5 @@ This file is created during onboarding. You can edit it manually at any time.
 
 - Style examples:
 - Phrases or patterns to avoid:
-- WordPress endpoint or proxy:
+- CMS endpoint or proxy:
 - Other editorial or technical notes:
-

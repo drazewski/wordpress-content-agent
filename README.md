@@ -1,34 +1,32 @@
-# WordPress Content Agent
+<div align="center">
 
-Start here.
+# Content Workflow Agent
 
-This repository is a reusable workspace for creating WordPress article drafts with AI agents such as Codex, GitHub Copilot, Claude, Gemini, or similar tools.
+**Reusable AI workspace for article onboarding, source analysis, web research, editorial style, SEO, taxonomy, review, and optional publishing integrations.**
+
+🧭 📝 🔎 ⚙️
+
+`README.md` -> `AGENTS.md` -> `.agents/skills/onboarding/SKILL.md`
+
+**Start with onboarding. Create drafts safely. Publish only when explicitly requested.**
+
+</div>
+
+---
+
+## 🚀 Start Here
+
+This repository helps AI agents such as Codex, GitHub Copilot, Claude, Gemini, or similar tools create structured article drafts.
 
 The first action in a fresh copy of this repository is always onboarding.
 
-`project-context.md` is intentionally not included. It must be created by the onboarding workflow for the specific site, author, brand, or editorial team.
+`project-context.md` is intentionally not included. It is created by onboarding for a specific site, author, brand, publication, or editorial team.
 
-Onboarding is intentionally short. It creates a first usable `project-context.md`, and you can manually edit that file at any time later.
+> Onboarding is intentionally short. It creates a first usable `project-context.md`, and you can manually edit that file at any time later.
 
-## You Can Edit Context Later
+## 🧭 Quick Start
 
-The onboarding result is not final or locked. It is only a starting profile for the agent.
-
-After onboarding, you can open `project-context.md` and change anything manually:
-
-- site description,
-- tone,
-- source rules,
-- categories and tags,
-- WordPress publishing mode,
-- notes about what to avoid,
-- examples of articles to follow.
-
-You do not need to get everything right during onboarding.
-
-## Start Onboarding
-
-Use any of these entry points:
+Use one of these entry points:
 
 ```text
 codex "Start onboarding for this repository"
@@ -54,13 +52,30 @@ The agent should:
 
 1. Read `README.md`.
 2. Read `AGENTS.md`.
-3. Read `.agents/skills/wp-onboarding/SKILL.md`.
+3. Read `.agents/skills/onboarding/SKILL.md`.
 4. Tell the user that `project-context.md` can be edited manually later.
-5. Ask only short onboarding questions.
+5. Ask only short onboarding questions, one at a time, including article length, heading preference, source link preference, and whether the user wants the optional WordPress draft step after the Markdown file is created.
 6. Create `project-context.md`.
-7. Stop before article writing or WordPress publishing.
+7. Stop before article writing or publishing.
 
-## Create An Article
+## ✏️ You Can Edit Context Later
+
+The onboarding result is not final or locked. It is only a starting profile for the agent.
+
+After onboarding, you can open `project-context.md` and change anything manually:
+
+- project description,
+- audience,
+- tone,
+- source rules,
+- categories and tags,
+- publishing target,
+- notes about what to avoid,
+- examples of articles to follow.
+
+You do not need to get everything right during onboarding.
+
+## 📝 Create An Article
 
 After onboarding:
 
@@ -80,7 +95,28 @@ Finished drafts should be written to:
 articles/<topic>.md
 ```
 
-## Repository Layout
+## ⚙️ Agent Workflow
+
+Agents should use the repository in this order:
+
+1. `onboarding` - create or refresh `project-context.md`.
+2. `source-analysis` - analyze PDFs, reports, local notes, and other source documents.
+3. `web-research` - use external research only when allowed or requested.
+4. `editorial-style` - draft the article in the configured editorial style.
+5. `seo` - refine title, slug, excerpt, and meta description.
+6. `taxonomy` - choose category and tags.
+7. `editorial-review` - optional review before handoff or publishing.
+8. `markdown-export` - required default file output to Markdown or MDX.
+9. `social-teaser` - optional teaser and social copy.
+10. `wordpress-publish` - optional WordPress draft creation only when explicitly requested.
+
+For a complete article workflow, read:
+
+```text
+workflows/create-article.md
+```
+
+## 📁 Repository Layout
 
 ```text
 .
@@ -88,30 +124,32 @@ articles/<topic>.md
 +-- README.md
 +-- .agents/
 |   +-- skills/
-|       +-- wp-onboarding/
+|       +-- onboarding/
 |       |   +-- SKILL.md
-|       +-- wp-scientific-article/
+|       +-- source-analysis/
 |       |   +-- SKILL.md
-|       +-- wp-search-and-write/
+|       +-- web-research/
 |       |   +-- SKILL.md
-|       +-- wp-style/
+|       +-- editorial-style/
 |       |   +-- SKILL.md
-|       +-- wp-seo/
+|       +-- seo/
 |       |   +-- SKILL.md
-|       +-- wp-tags-taxonomy/
+|       +-- taxonomy/
 |       |   +-- SKILL.md
-|       +-- wp-publish-drafts/
+|       +-- editorial-review/
 |       |   +-- SKILL.md
-|       +-- wp-social-teaser/
+|       +-- markdown-export/
 |       |   +-- SKILL.md
-|       +-- wp-editorial-review/
+|       +-- social-teaser/
+|       |   +-- SKILL.md
+|       +-- wordpress-publish/
 |           +-- SKILL.md
 +-- .github/
 |   +-- copilot-instructions.md
 |   +-- instructions/
-|       +-- wordpress-publisher.instructions.md
+|       +-- content-workflow.instructions.md
 +-- workflows/
-|   +-- create-and-publish-article.md
+|   +-- create-article.md
 +-- prompts/
 |   +-- start-onboarding.md
 |   +-- create-article.md
@@ -120,34 +158,19 @@ articles/<topic>.md
 +-- .env.example
 ```
 
-## Agent Workflow
+## 🧩 Optional WordPress Integration
 
-Agents should use the repository in this order:
+The core workflow is CMS-neutral. Markdown is always the primary output format, while WordPress is treated as an optional publishing target.
 
-1. `wp-onboarding` - create or refresh `project-context.md`.
-2. `wp-scientific-article` - analyze PDFs, reports, and local source documents.
-3. `wp-search-and-write` - use external research only when allowed or requested.
-4. `wp-style` - draft the article in the configured editorial style.
-5. `wp-seo` - refine title, slug, excerpt, and meta description.
-6. `wp-tags-taxonomy` - choose category and tags.
-7. `wp-editorial-review` - optional review before publication.
-8. `wp-publish-drafts` - create or update a WordPress draft only when explicitly requested.
-9. `wp-social-teaser` - optional teaser/social copy.
+By default, the workflow operates in Markdown-only mode. However, agents can also create or update WordPress drafts.
 
-For a complete article workflow, read:
-
-```text
-workflows/create-and-publish-article.md
-```
-
-## WordPress Publishing
-
-Default mode is file-only. Agents must not publish or update WordPress drafts unless the user explicitly asks.
+Users can decide whether WordPress integration should be enabled during onboarding or later by modifying the `project-context.md` file.
 
 To enable WordPress draft creation:
 
-1. Copy `.env.example` to `.env`.
-2. Fill in the WordPress API settings.
-3. Ask the agent to create or update a draft.
+1. Copy `.env.example` to `.env`
+2. Configure the WordPress API credentials
+3. Ask the agent to create or update a WordPress draft after generating the Markdown article
 
-The default WordPress status is always `draft`.
+All WordPress posts are created with `draft` status by default.
+

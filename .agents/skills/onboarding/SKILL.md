@@ -1,8 +1,7 @@
 ---
-name: wp-onboarding
-description: Quickly create project-context.md for a WordPress content workflow before article creation starts.
+name: onboarding
+description: Quickly create project-context.md for an article workflow before article creation starts.
 aliases:
-  - onboarding
   - $onboarding
 ---
 
@@ -22,35 +21,47 @@ This onboarding will stay short. I will create the first version of project-cont
 
 - Keep onboarding short.
 - Ask only the minimum questions needed to avoid bad assumptions.
+- Ask exactly one question at a time. Wait for the user's answer before asking the next question.
 - Prefer multiple-choice style suggestions and defaults.
 - Remind the user that missing details can be added later by editing `project-context.md`.
 - Do not ask for long lists, detailed style rules, examples, or phrases to avoid during first onboarding.
 - If the user gives a vague answer, use a reasonable default and mark it as a default in `project-context.md`.
 - Do not start article writing during onboarding.
-- Do not publish anything to WordPress.
+- Do not publish anything.
 
-# Minimum questions
+# Required questions
 
-Ask these questions in one or two small batches.
+Ask these questions one at a time. Do not group multiple questions in one message.
 
-## Batch 1: editorial basics
+1. What is the site, publication, or project about?
 
-1. What is the site or project about?
 2. Who is the main reader?
+
 3. What kind of articles should the agent usually create?
    - suggested choices: guides, news, research summaries, analyses, reviews, opinion/commentary
+
 4. What tone should the articles use?
    - suggested choices: factual, approachable, expert, conversational, formal
 
-## Batch 2: workflow basics
+5. What length should articles usually have?
+   - suggested choices: short, medium (default), long, depends on topic
 
-5. Where will article material usually come from?
+6. Should articles use headings?
+   - suggested choices: yes, use H2/H3 headings (default); no, avoid headings unless requested; only for longer articles
+
+7. Should articles include links to cited sources?
+   - suggested choices: yes (default), no, only when external research is used
+
+8. Where will article material usually come from?
    - suggested choices: local files in `source/`, user-provided links, web research, mixed
-6. Can the agent use external web research when local material is not enough?
+
+9. Can the agent use external web research when local material is not enough?
    - suggested choices: yes, only after asking, no
-7. Should finished articles stay as files, or can the agent create WordPress drafts?
-   - suggested choices: files only, WordPress drafts after approval
-8. Do you already have fixed WordPress categories or tags?
+
+10. Should finished articles also be exported to WordPress drafts after the local Markdown file is created?
+   - suggested choices: no, Markdown file only (default); yes, Markdown file plus WordPress draft after approval
+
+11. Do you already have fixed categories or tags?
    - suggested choices: no, yes and I will provide them later, yes and I will provide them now
 
 # Optional follow-up only if needed
@@ -58,9 +69,8 @@ Ask these questions in one or two small batches.
 Ask these only when the user's earlier answers make them necessary:
 
 - What language should the articles be written in?
-- Should articles include a source list?
-- Is there a strict maximum or preferred article length?
-- Is there a specific WordPress API/proxy setup already available?
+- Is there a specific CMS API/proxy setup already available?
+- If WordPress draft export is selected: are credentials and API settings already available in `.env`?
 
 # Do not ask during first onboarding
 
@@ -74,7 +84,7 @@ Do not ask these during first onboarding unless the user volunteers the informat
 - social media teaser requirements,
 - comparison against an existing archive,
 - detailed approval workflow,
-- WordPress credentials.
+- CMS credentials.
 
 # Output
 
@@ -87,6 +97,8 @@ Default: not specified during onboarding.
 ```
 
 At the end, tell the user that `project-context.md` has been created and can be edited manually at any time.
+
+Always record that Markdown export to `articles/` is the base output. WordPress draft creation, when selected, is an additional optional step and does not replace the Markdown file.
 
 # Rules
 

@@ -1,5 +1,5 @@
 ---
-name: wp-search-and-write
+name: web-research
 description: Find reliable external sources for a topic and build a factual base for an article when local source materials are not enough.
 ---
 
@@ -23,4 +23,3 @@ description: Find reliable external sources for a topic and build a factual base
 - Use this skill only when `project-context.md` allows external research or when the user explicitly asks for it.
 - Cite sources clearly when the final article requires source attribution.
 - Do not use external research to override stronger local source material without saying so.
-

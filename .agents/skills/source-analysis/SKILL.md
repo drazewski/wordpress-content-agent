@@ -1,5 +1,5 @@
 ---
-name: wp-scientific-article
+name: source-analysis
 description: Analyze scientific papers, reports, PDFs, and other source documents from /source to extract reliable facts for an article draft.
 ---
 
@@ -30,5 +30,4 @@ Some folders may include `.txt` or `.md` files with:
 2. Extract the core findings in plain language.
 3. Preserve source details that matter: authors, publication date, place, method, scale, limits.
 4. Flag missing information instead of filling gaps with assumptions.
-5. Prepare a reliable factual base for the article that can later be shaped by `wp-style`.
-
+5. Prepare a reliable factual base for the article that can later be shaped by `editorial-style`.

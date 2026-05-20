@@ -1,5 +1,5 @@
 ---
-name: wp-publish-drafts
+name: wordpress-publish
 description: Create or update WordPress draft posts from prepared article files using generic, reusable API rules.
 ---
 
@@ -8,7 +8,7 @@ description: Create or update WordPress draft posts from prepared article files 
 - The target WordPress site or local proxy should be reachable.
 - Credentials should be provided through `.env`, based on `.env.example`.
 - Drafts should always stay in `draft` status unless the user explicitly chooses another workflow outside this template.
-- Respect the publication mode defined during `wp-onboarding`. If the project is file-only, do not publish.
+- Respect the publication mode defined during `onboarding`. If the project is Markdown-only, do not publish.
 
 ## Common endpoints
 
@@ -53,4 +53,3 @@ Content-Type: application/json
 - Update an existing post instead of creating duplicates when the draft already exists.
 - Send tag and category IDs, not names.
 - If the request fails, return the error clearly instead of masking it.
-

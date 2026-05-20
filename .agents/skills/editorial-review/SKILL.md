@@ -1,5 +1,5 @@
 ---
-name: wp-editorial-review
+name: editorial-review
 description: Review a draft against project context, source material, and optionally existing published content before publication.
 ---
 
@@ -41,4 +41,3 @@ Return:
 - concrete edit suggestions,
 - unresolved questions,
 - publication readiness: ready, needs edits, or blocked.
-
