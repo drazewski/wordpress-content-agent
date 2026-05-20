@@ -2,7 +2,9 @@
 
 # Content Workflow Agent
 
-**Reusable AI workspace for article onboarding, source analysis, web research, editorial style, SEO, taxonomy, review, and optional publishing integrations.**
+**Reusable AI workspace for creating written content of all kinds — articles, blog posts, reviews, summaries, descriptions, reports, and publication-ready Markdown documents.**
+
+Designed as a modular content workflow system with onboarding, source analysis, web research, editorial style guidance, SEO metadata, taxonomy generation, review pipelines, and optional publishing integrations such as WordPress.
 
 🧭 📝 🔎 ⚙️
 
