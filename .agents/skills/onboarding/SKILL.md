@@ -64,11 +64,13 @@ Ask these questions one at a time. Do not group multiple questions in one messag
 11. Do you already have fixed categories or tags?
    - suggested choices: no, yes and I will provide them later, yes and I will provide them now
 
+12. What is your prefer language for creating articles?
+   - suggested choices: English (default), other (please specify)
+
 # Optional follow-up only if needed
 
 Ask these only when the user's earlier answers make them necessary:
 
-- What language should the articles be written in?
 - Is there a specific CMS API/proxy setup already available?
 - If WordPress draft export is selected: are credentials and API settings already available in `.env`?
 
